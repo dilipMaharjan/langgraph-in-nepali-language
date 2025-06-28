@@ -4,6 +4,18 @@ Welcome to the **LangGraph Learning Series** — your complete guide to masterin
 
 ---
 
+## ✅ Prerequisites
+
+    Python 3.9 or higher installed
+
+    Basic knowledge of Python and large language models (LLMs)
+
+    OpenAI API key or similar (e.g., Anthropic, Cohere) or open source LLM 
+
+    Familiarity with LangChain (optional, but helpful)
+
+    virtual env for creating isolated environments
+
 ## 📚 Topics Covered
 
 Each topic includes detailed notes, code examples, and project walkthroughs.
