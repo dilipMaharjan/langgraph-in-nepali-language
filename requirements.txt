@@ -1,4 +1,6 @@
-langgraph
 langchain
-langsmith
-langchain-ollama
+langchain-core
+langchain-community
+langgraph
+python-dotenv
+langchain-groq
