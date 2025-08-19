@@ -1,0 +1,7 @@
+{
+    "dependencies":["."],
+    "graphs":{
+        "llm_call":"./agent_with_tool.py:agent"
+    },
+    "env":"../../.env"
+}
