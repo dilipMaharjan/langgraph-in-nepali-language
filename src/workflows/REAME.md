@@ -11,3 +11,25 @@
 - Multiple nodes can operate without dependency
 - Can start at the same time or at a particular point
 - Can merge in the downstream nodes based on functionality
+
+## Routing
+
+- Conditionally determine which node should execute next based on current state/output of a node
+- promotes dynamic flow
+- conditional logic
+- Flexibility
+
+## Orchestrator-Worker
+
+- A central LLM dynamically breaks down tasks
+- Delegates them to worker LLMs
+- Syntheisizes their results.
+- Well-suited for complex tasks where you can't predict the subtasks needed.
+- Key difference from parallelization is its flexisbility- subtasks aren't pre-defined but determined by the orchestrator based on the specific input
+
+## Evaluator-Optimizer
+
+- One llm generates a response while another provides feedback
+- Effective when there is clear evaluation criteria.
+- iterative refinement provides refined value
+- Optimizer can be replaced with human as well.
