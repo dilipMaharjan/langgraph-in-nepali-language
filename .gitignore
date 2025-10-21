@@ -2,3 +2,5 @@
 .langgraph_api
 __pycache__
 .DS_Store
+.vscode/tasks.json
+.vscode/launch.json

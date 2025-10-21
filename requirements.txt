@@ -7,3 +7,5 @@ langchain-groq
 arxiv
 wikipedia
 langgraph-cli[inmem]
+langchain-openai
+faiss-cpu
