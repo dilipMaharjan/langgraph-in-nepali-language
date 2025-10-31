@@ -9,7 +9,7 @@ A simple guide to set up your **Agentic Chat Bot** project — including Git set
 Make sure you have the following installed:
 
 - **Git**
-- **Python 3.8+**
+- **Python**
 - **pip**
 
 Check installations:
@@ -53,7 +53,7 @@ git checkout -b agentic-chat-bot  # Create and switch to new branch
 ## 🏗️ 3. Set Up Python Virtual Environment
 
 ```bash
-python3 -m venv agentic-chat-bot-env   # Create a virtual environment
+python3 -m venv agentic-chat-bot   # Create a virtual environment
 ```
 
 Activate it:
@@ -62,12 +62,6 @@ Activate it:
 
 ```bash
 source agentic-chat-bot-env/bin/activate   # Activate virtual environment
-```
-
-**Windows (PowerShell)**
-
-```bash
-agentic-chat-bot-env\Scripts\Activate.ps1  # Activate virtual environment
 ```
 
 ---
