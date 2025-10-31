@@ -1,0 +1,32 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+agentic-chat-bot-env/
+venv/
+env/
+pyvenv.cfg
+
+# OS files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# LangGraph API folder (generated)
+.langgraph_api/
+
+# Streamlit cache (if used)
+.streamlit/
+
+# Logs
+*.log
+
+# Ignore other system or build folders
+bin/
+include/
+lib/
+share/
+etc/

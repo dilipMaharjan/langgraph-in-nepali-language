@@ -4,3 +4,5 @@ __pycache__
 .DS_Store
 .vscode/tasks.json
 .vscode/launch.json
+setup_langgraph_env.sh
+.vscode
