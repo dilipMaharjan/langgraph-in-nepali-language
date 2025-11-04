@@ -14,6 +14,7 @@ pyvenv.cfg
 
 # VS Code settings
 .vscode/
+.env
 
 # LangGraph API folder (generated)
 .langgraph_api/
