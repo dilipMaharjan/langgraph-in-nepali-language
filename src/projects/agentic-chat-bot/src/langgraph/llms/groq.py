@@ -12,7 +12,7 @@ class Groq:
             selected_model=self.user_controls_input["selected_groq_model"]
             if api_key == '' and os.environ["GROQ_API_KEY"] == '':
                 st.error("Please Enter the Groq API KEY")
-            llm=ChatGroq(api_key=api_key,model=selected_model)
+            llm=ChatGroq(api_key=api_key,model=selected_model,temperature=0.7)
         except Exception as e:
             raise ValueError(f" Error Occurred with Exception : {e}")
         return llm
