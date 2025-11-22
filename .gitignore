@@ -6,3 +6,5 @@ __pycache__
 .vscode/launch.json
 setup_langgraph_env.sh
 .vscode
+news/*
+

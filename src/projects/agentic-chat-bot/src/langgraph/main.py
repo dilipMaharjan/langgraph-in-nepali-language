@@ -3,6 +3,7 @@ from src.langgraph.llms.groq import Groq
 from src.langgraph.ui.streamlit.load_ui import LoadStreamlitUI
 from src.langgraph.graph.graph_builder import GraphBuilder
 from src.langgraph.ui.streamlit.display_result import DisplayResultStreamlit
+import traceback
 
 def load_agentic_app_ui():
     ui=LoadStreamlitUI()
@@ -11,6 +12,11 @@ def load_agentic_app_ui():
     if not user_input:
         st.error(" Error : Failed to load user input from the UI")
     user_message = st.chat_input ("Enter your message.")
+
+    if st.session_state.IsFetchButtonClicked:
+        user_message=st.session_state.timeframe
+    else:
+        user_message= st.chat_input("Enter your message:")
 
     if user_message:
         try:
@@ -30,6 +36,9 @@ def load_agentic_app_ui():
                 DisplayResultStreamlit(usecase,graph,user_message).display_result()
             except Exception as e:
                 st.error(f" Graph Display Failed with error: {e}")
+                tb = traceback.format_exc()
+                st.text("Full traceback:")
+                st.text(tb)
                 return 
         except Exception as e:    
             st.error(f"Graph Setup Failed with error: {e}")
