@@ -1,6 +1,6 @@
-from re import S
 from langgraph.graph import StateGraph, START,END
 from nodes.blog_node import BlogNode
+from llms.groq import Groq
 from states.blog_state import BlogState
 
 class GraphBuilder:
@@ -28,6 +28,11 @@ class GraphBuilder:
         if usecase=="topic":
             self.build_graph()
         return self.graph.compile()
+
+llm=Groq().get_llm()
+graph_builder=GraphBuilder(llm)
+graph=graph_builder.build_graph().compile()
+
 
         
 
