@@ -16,12 +16,16 @@ os.environ["LANGSMITH_API_KEY"]=os.getenv("LANGSMITH_API_KEY")
 async def create_blog(request:Request):
     data=await request.json()
     topic=data.get("topic","")
+    language=data.get("language","")
     groq_obj=Groq()
     llm=groq_obj.get_llm()
 
     graph_builder_obj=graph_builder.GraphBuilder(llm)
 
-    if topic:
+    if topic and language:
+        graph=graph_builder_obj.setup_graph(usecase="language")
+        state=graph.invoke({"topic":topic,"content_language":language.lower()})
+    elif topic:
         graph=graph_builder_obj.setup_graph(usecase="topic")
         state=graph.invoke({"topic":topic})
     return {"data":state}
